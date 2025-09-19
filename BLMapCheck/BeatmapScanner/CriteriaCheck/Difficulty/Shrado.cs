@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Runtime.Remoting.Messaging;
 using BLMapCheck.Classes.Results;
 using Parser.Map.Difficulty.V3.Grid;
 using static BLMapCheck.Classes.Helper.Helper;

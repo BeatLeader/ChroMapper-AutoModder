@@ -157,7 +157,7 @@ namespace BLMapCheck.BeatmapScanner.CriteriaCheck.Difficulty
                     if (swing.resetType == ResetType.Rebound) commentType = Severity.Error;
                     if (Math.Abs(swing.endPos.rotation) > 135 || Math.Abs(swing.endPos.rotation) > 135) commentType = Severity.Inconclusive;
 
-                    List<KeyValuePair> resultData = new()
+                    List<Classes.Results.KeyValuePair> resultData = new()
                     {
                         new("swingParity", swing.swingParity.ToString()),
                         new("resetType", swing.resetType.ToString()),

@@ -255,7 +255,7 @@ namespace BLMapCheck.BeatmapScanner.CriteriaCheck
                     if (target.Notes.Exists(x => x.Beats == note.Beats)) continue;
                     var previous = target.Notes.Where(x => x.Beats < note.Beats)?.Select(x => x.Beats).DefaultIfEmpty().Aggregate((x, y) => Math.Abs(x - note.Beats) < Math.Abs(y - note.Beats) ? x : y);
                     var next = target.Notes.Where(x => x.Beats > note.Beats)?.Select(x => x.Beats).DefaultIfEmpty().Aggregate((x, y) => Math.Abs(x - note.Beats) < Math.Abs(y - note.Beats) ? x : y);
-                    List<KeyValuePair> results = new();
+                    List<Classes.Results.KeyValuePair> results = new();
                     if (previous != null) results.Add(new("Previous:", previous.ToString()));
                     if (next != null) results.Add(new("Next:", next.ToString()));
 

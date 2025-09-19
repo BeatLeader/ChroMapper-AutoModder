@@ -17,6 +17,18 @@ using BLMapCheck.Configs;
 
 namespace ChroMapper_LightModding
 {
+public class ConsoleRedirectTextWriter : System.IO.TextWriter
+{
+    public override System.Text.Encoding Encoding
+    {
+        get { return System.Text.Encoding.UTF8; }
+    }
+
+    public override void WriteLine(string value)
+    {
+        Debug.Log(value);
+    }
+}
 
     [Plugin("AutoModder")]
     public class Plugin
@@ -101,6 +113,8 @@ namespace ChroMapper_LightModding
         [Init]
         private void Init()
         {
+            Console.SetOut(new ConsoleRedirectTextWriter());
+
             exporter = new();
             fileHelper = new(this);
             autocheckHelper = new(this, fileHelper);
