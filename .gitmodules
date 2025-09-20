@@ -4,3 +4,6 @@
 [submodule "beatleader-analyzer"]
 	path = beatleader-analyzer
 	url = https://github.com/BeatLeader/beatleader-analyzer.git
+[submodule "JoshaParity"]
+	path = JoshaParity
+url=https://github.com/Loloppe/JoshaParity.git

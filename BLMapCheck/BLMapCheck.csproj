@@ -26,19 +26,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Reference Include="JoshaParity">
-      <HintPath>dll\JoshaParity.dll</HintPath>
-      <Private>true</Private>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="dll\JoshaParity.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
   
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
@@ -47,6 +34,7 @@
   <ItemGroup>
     <ProjectReference Include="..\beatleader-analyzer\beatleader-analyzer\Analyzer.csproj" />
     <ProjectReference Include="..\beatleader-parser\beatleader-parser\Parser.csproj" />
+    <ProjectReference Include="..\JoshaParity\JoshaParity\JoshaParity.csproj" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
